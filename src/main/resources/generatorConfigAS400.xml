@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="D:\maven\repo\com\ibm\as400\jt400\1.0\jt400-1.0.jar" />
+	<context id="RINKS">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库链接地址账号密码 -->
+		<jdbcConnection driverClass="com.ibm.as400.access.AS400JDBCDriver"
+			connectionURL="jdbc:as400://172.31.96.69/R21AFLBZ;errors=full;transaction isolation=none;date format=iso"
+			userId="PGR01" password="ITS123">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!--生成Model类存放位置 -->
+		<javaModelGenerator targetPackage="com.ricoh.smart.pojo"
+			targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--生成映射文件存放位置 -->
+		<sqlMapGenerator targetPackage="com.ricoh.smart.pojo.mapping"
+			targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!--生成Dao类存放位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.ricoh.smart.dao" targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!--生成对应表及类名 -->
+		<!--<table schema="R21AFLBZ" tableName="ZKC03P" domainObjectName="Recruitment"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table schema="R21AFLBZ" tableName="ZINV1P" domainObjectName="PickList"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table schema="R21AFLBZ" tableName="ZINV2P" domainObjectName="TransportList"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table schema="R21AFLBZ" tableName="ZKTNSP" domainObjectName="TNStatu"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table schema="R21AFLBZ" tableName="ZKTNHP" domainObjectName="TNHistory"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>-->
+		<!-- <table schema="R21AFLBZ" tableName="ZKITCP" domainObjectName="SMARTItMaster"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table schema="R21AFLBZ" tableName="ZJTNMP" domainObjectName="SMARTTnMaster"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table> -->
+		<!--<table schema="R21AFLBZ" tableName="MAUSRP" domainObjectName="RINKSUser"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>-->
+		<!--<table schema="R21AFLBZ" tableName="MHBODP" domainObjectName="MHBODP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="MJINVB" domainObjectName="MJINVB"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="MJINVP" domainObjectName="MJINVP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="MJTRHP" domainObjectName="MJTRHP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="MCPSTP" domainObjectName="MCPSTP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZUPSTP" domainObjectName="ZUPSTP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZCMUSP" domainObjectName="ZCMUSP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZKU01P" domainObjectName="ZKU01P_R21"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZINV4P" domainObjectName="ZINV4P"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZINV3P" domainObjectName="ZINV3P"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="MGPLNP" domainObjectName="MGPLNP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="ESIAFLBZ" tableName="EXIV2P" domainObjectName="EXIV2P"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="ESIAFLBZ" tableName="ERPCCP" domainObjectName="ERPCCP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table schema="R21AFLBZ" tableName="ZKCAOP" domainObjectName="ZKCAOP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>-->
+	    <table schema="R21AFLBZ" tableName="MCSTNP" domainObjectName="MCSTNP"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+	</context>
+</generatorConfiguration>

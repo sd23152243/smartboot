@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="D:\maven\repo\com\microsoft\sqlserver\sqljdbc4\4.0\sqljdbc4-4.0.jar" />
+	<context id="RINKS">
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!--数据库链接地址账号密码 -->
+		<jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+			connectionURL="jdbc:sqlserver://172.31.72.62:1433;databaseName=iChart"
+			userId="MARS_E" password="rs@996t!ty">
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<!--生成Model类存放位置 -->
+		<javaModelGenerator targetPackage="com.ricoh.smart.pojo"
+			targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--生成映射文件存放位置 -->
+		<sqlMapGenerator targetPackage="com.ricoh.smart.pojo.mapping"
+			targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!--生成Dao类存放位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.ricoh.smart.dao" targetProject="smart">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!--生成对应表及类名 -->
+		
+		<!-- <table catalog="DWH_DATA" tableName="iChartUser" domainObjectName="iChartUser"
+			enableCountByExample="false" enableUpdateByExample="yes"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>  
+		<table catalog="DWH_DATA" tableName="ZKU01P" domainObjectName="ZKU01P_DWH"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table catalog="DWH_DATA" tableName="ZTD02P" domainObjectName="ZTD02P"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table catalog="DWH_DATA" tableName="ZTD06P" domainObjectName="ZTD06P"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>
+		<table catalog="iChart" tableName="iPipe" domainObjectName="IPipe"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes"></table>-->
+		<table catalog="DWH_DATA" tableName="ItemReqPt" domainObjectName="ItemReqPt"
+			enableCountByExample="yes" enableUpdateByExample="yes"
+			enableDeleteByExample="yes" enableSelectByExample="yes"
+			selectByExampleQueryId="yes">
+		</table>
+	</context>
+</generatorConfiguration>
